@@ -12,7 +12,9 @@ const projectsData = {
         tools: 'Unity, C#, Blender',
         platform: 'PC',
         date: 'Dec 21, 2023',
-        bgImage: 'image/santelmo.png'
+        bgImage: 'image/santelmo.png',
+        generalRole: ' 3D Artist ',
+        contributions: ['Created 3D character and environment models']
     },
     'road-ready': {
         title: 'Road Ready',
@@ -23,7 +25,9 @@ const projectsData = {
         tools: 'Unity, C#, Maya, Blender, Substance Painter, Photoshop',
         platform: 'PC',
         date: 'Mar 15, 2024',
-        bgImage: 'image/road ready.png'
+        bgImage: 'image/road ready.png',
+        generalRole: 'Lead 3D Artist | Level Designer',
+        contributions: ['Modeled Vehicles & NPC\'s (jeepney, Etrike, Car)', 'Designed educational level layouts with real traffic signs', 'Applied texture using photoshop and substance painter']
     },
     'dont-get-fooled': {
         title: "Don't Get Fooled",
@@ -34,7 +38,9 @@ const projectsData = {
         tools: 'Unity, C#, Aseprite',
         platform: 'PC',
         date: 'Feb 10, 2024',
-        bgImage: 'image/Dont Get Fooled.png'
+        bgImage: 'image/Dont Get Fooled.png',
+        generalRole: 'Solo Dev | Gameplay Programmer | UI/ UX Designer | Level Designer',
+        contributions: ['Programmed character controls and movement systems', 'Designed challenging trap-filled platformer levels', 'Created pixel art and visual direction for the game', 'Balanced difficulty progression and player experience']
     },
     'lume': {
         title: 'Lume',
@@ -45,7 +51,9 @@ const projectsData = {
         tools: 'Unity, C#, Blender',
         platform: 'PC',
         date: 'Jan 20, 2024',
-        bgImage: 'image/lume.jpeg'
+        bgImage: 'image/lume.jpeg',
+        generalRole: ' 3D Artist | Level Designer',
+        contributions: ['Created 3D models for characters', 'Structured engaging level progression']
     },
     'allen-denz': {
         title: 'Allen and Denz Quest',
@@ -56,18 +64,22 @@ const projectsData = {
         tools: 'Unity, C#',
         platform: 'PC',
         date: 'Nov 30, 2023',
-        bgImage: 'image/a1.png'
+        bgImage: 'image/a1.png',
+        generalRole: 'Level Designer',
+        contributions: ['Designed puzzle levels requiring teamwork and coordination', 'Balanced gameplay for two-player cooperative experience']
     },
     'balut-quest': {
         title: "Balut's Quest",
         description: 'Balut\'s Quest is a 2D platformer gunner game where you embark on an epic journey through colorful worlds filled with enemies and challenges.',
-        video: YOUTUBE_EMBED_URL,
+        video: 'https://www.youtube.com/embed/IDJVP0zZ3TI',
         screenshots: ['image/b1.png', 'image/b2.png', 'image/b3.png', 'image/b4.png'],
         role: 'Developer',
         tools: 'Unity, C#',
         platform: 'PC',
         date: 'Dec 5, 2023',
-        bgImage: 'image/b1.png'
+        bgImage: 'image/b1.png',
+        generalRole: 'Level Designer',
+        contributions: ['Programmed platforming and shooting mechanics', 'Designed diverse levels across colorful worlds', 'Developed enemy AI and combat behaviors', 'Balanced weapon upgrades and gameplay progression']
     },
     'lost': {
         title: "Lost",
@@ -78,7 +90,9 @@ const projectsData = {
         tools: 'Unity, Maya, C#',
         platform: 'PC',
         date: 'June 8, 2025',
-        bgImage: 'image/lost1.png'
+        bgImage: 'image/lost1.png',
+        generalRole: 'Solo Dev | Gameplay Programmer | 3D Artist | AI Developer',
+        contributions: ['Developed core stealth and light mechanics', 'Created 3D models and environment assets', 'Designed intricate puzzle-platformer challenges', 'Implemented AI for enemy detection and behavior', 'Structured engaging level progression and pacing']
     }
 };
 
@@ -166,6 +180,17 @@ function showProjectDetails(project, projectKey) {
     document.getElementById("projectTools").textContent = project.tools;
     document.getElementById("projectPlatform").textContent = project.platform;
     document.getElementById("projectDate").textContent = project.date;
+    
+    // Update general role and contributions
+    document.getElementById("projectGeneralRole").textContent = project.generalRole;
+    const contributionsList = document.getElementById("projectContributions");
+    contributionsList.innerHTML = '';
+    
+    project.contributions.forEach(contribution => {
+        const listItem = document.createElement('li');
+        listItem.textContent = contribution;
+        contributionsList.appendChild(listItem);
+    });
     
     // Update video
     document.getElementById("projectVideo").src = project.video;

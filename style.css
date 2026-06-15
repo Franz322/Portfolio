@@ -783,6 +783,76 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
     letter-spacing: 0.3px;
 }
 
+/* Contributions Section */
+.project-contributions-section {
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.project-contributions-section h3 {
+    color: #a341ff;
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contributions-box {
+    background: #1a1a1a;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    color: #d0d0d0;
+}
+
+.general-role {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.role-label {
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+#projectGeneralRole {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.contributions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contributions-list li {
+    color: #c0c0c0;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.contributions-list li:last-child {
+    margin-bottom: 0;
+}
+
+.contributions-list li:before {
+    content: "−";
+    position: absolute;
+    left: 0;
+    color: #57e9ff;
+    font-weight: bold;
+}
+
 /* Inline Project Info (Row Format) */
 .project-info-inline {
     display: flex;
@@ -1104,6 +1174,25 @@ footer { text-align: center; padding: 40px; background: #000; border-top: 1px so
 
     .project-description-section {
         padding: 25px 15px;
+    }
+
+    .project-contributions-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .contributions-box {
+        padding: 20px;
+    }
+
+    .general-role {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .contributions-list li {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
     }
 
     .next-project-btn {
