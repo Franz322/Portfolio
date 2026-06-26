@@ -36,7 +36,7 @@ const projectsData = {
         screenshots: ['image/dont1.jpg', 'image/dont2.jpg', 'image/dont3.jpg', 'image/dont4.jpg'],
         role: 'Developer & Designer',
         tools: 'Unity, C#, Aseprite',
-        platform: 'PC',
+        platform: 'Mobile/Android',
         date: 'Feb 10, 2024',
         bgImage: 'image/Dont Get Fooled.png',
         generalRole: 'Solo Dev | Gameplay Programmer | UI/ UX Designer | Level Designer',
